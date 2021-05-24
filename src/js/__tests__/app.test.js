@@ -17,3 +17,7 @@ test('test', () => {
     return error;
   });
 });
+
+test('test error', () => {
+  return GameSavingLoader.load().catch((e) => expect(e).toMatch('error'));
+});
